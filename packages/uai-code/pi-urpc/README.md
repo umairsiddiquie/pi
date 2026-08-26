@@ -20,7 +20,7 @@ pi-urpc
 
 ## Ownership boundary
 
-`pi-mcp-adapter` remains responsible for MCP protocol negotiation, authentication/OAuth, approvals, connection lifecycle, caching, proxy/direct-tool presentation, reconnects and Pi integration. The adapter's package-manifest mechanism is specifically intended for Pi packages that ship MCP server definitions. citeturn6search0
+`pi-mcp-adapter` remains responsible for MCP protocol negotiation, authentication/OAuth, approvals, connection lifecycle, caching, proxy/direct-tool presentation, reconnects and Pi integration. Its package-manifest mechanism is designed for Pi packages that ship MCP server definitions.
 
 `pi-urpc` owns only the URPC bridge contract and transport dispatch. It does not persist credentials, implement OAuth, maintain an MCP cache, or bypass the adapter.
 
@@ -72,7 +72,7 @@ The bridge sends one JSON-RPC request followed by a newline and waits for the ma
 - `urpc_health` — bridge/upstream health.
 - `urpc_call` — invoke an allowlisted URPC method with an object of parameters.
 
-The server intentionally reports the legacy MCP protocol revision `2024-11-05`; the installed adapter can negotiate in `auto` mode and retain its compatibility behavior instead of the bridge claiming support for newer protocol features it does not implement. citeturn6search0
+The server intentionally reports the legacy MCP protocol revision `2024-11-05`; the installed adapter can negotiate in `auto` mode and retain its compatibility behavior instead of the bridge claiming support for newer protocol features it does not implement.
 
 ## Tests
 
