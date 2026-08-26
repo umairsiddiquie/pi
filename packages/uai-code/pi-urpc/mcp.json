@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "urpc": {
+      "command": "node",
+      "args": ["server.mjs"],
+      "cwd": "packages/uai-code/pi-urpc",
+      "lifecycle": "lazy",
+      "requestTimeoutMs": 30000,
+      "protocolVersion": "auto",
+      "directTools": false
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "pi-urpc",
+  "version": "0.1.0",
+  "description": "Thin URPC bridge exposed to Pi through MCP.",
+  "private": true,
+  "type": "module",
+  "pi": {
+    "mcp": "./mcp.json"
+  },
+  "bin": {
+    "pi-urpc": "server.mjs"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  },
+  "engines": {
+    "node": ">=22.19.0"
+  }
+}
